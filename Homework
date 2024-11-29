@@ -1,0 +1,39 @@
+#include <iostream>
+
+using namespace std;
+
+int Pay (int age , bool member){
+    if (age < 12){
+        return 10;}
+    else if (age >= 12 && age < 18){
+        return member ? 12 : 15;}
+    else if (age >=18 && age <= 60){
+        return member ? 20 : 25;}
+    else {
+        return 10;}
+
+    }
+
+int main () {
+    int age;
+    string M;
+    bool member;
+
+    cout << "enter your age : ";
+    cin >> age;
+
+    cout << "Are you a member?(yes/no) " ;
+    cin >> M;
+
+    if (M == "yes"){
+        member = true;
+    }
+    else {
+        member = false ;
+    }
+
+    int payment = Pay(age,member);
+        cout << "you should pay "<<payment << " dollar";
+
+        return 0;
+        }
